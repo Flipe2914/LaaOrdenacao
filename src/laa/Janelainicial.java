@@ -59,7 +59,7 @@ public class Janelainicial extends javax.swing.JFrame {
         InsertionOrdButton = new javax.swing.JRadioButton();
         BubbleOrdButton = new javax.swing.JRadioButton();
         SelectionOrdButton = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        HeapOrdButton = new javax.swing.JRadioButton();
         RespostaOrdenacao = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
 
@@ -88,7 +88,7 @@ public class Janelainicial extends javax.swing.JFrame {
                         .addGroup(AbaBuscaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton3)
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         AbaBuscaLayout.setVerticalGroup(
             AbaBuscaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,7 +138,7 @@ public class Janelainicial extends javax.swing.JFrame {
                         .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
                         .addComponent(jTextField2)
                         .addComponent(jTextField3)))
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
         AbaComplexidadeLayout.setVerticalGroup(
             AbaComplexidadeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,10 +181,11 @@ public class Janelainicial extends javax.swing.JFrame {
         GrupoOrdenacaoRadio.add(SelectionOrdButton);
         SelectionOrdButton.setText("Selection");
 
-        GrupoOrdenacaoRadio.add(jRadioButton4);
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        GrupoOrdenacaoRadio.add(HeapOrdButton);
+        HeapOrdButton.setText("Heap");
+        HeapOrdButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                HeapOrdButtonActionPerformed(evt);
             }
         });
 
@@ -202,49 +203,50 @@ public class Janelainicial extends javax.swing.JFrame {
         AbaOrdenacaoLayout.setHorizontalGroup(
             AbaOrdenacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AbaOrdenacaoLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addGroup(AbaOrdenacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(RespostaOrdenacao)
-                    .addComponent(ConjNumOrdLabel))
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addGroup(AbaOrdenacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(InsertionOrdButton)
-                    .addComponent(ResulOrdLabel)
-                    .addComponent(VetorOrdText, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(AbaOrdenacaoLayout.createSequentialGroup()
+                        .addComponent(ConjNumOrdLabel)
                         .addGroup(AbaOrdenacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(SelectionOrdButton)
-                            .addComponent(BubbleOrdButton))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4))
-                    .addComponent(jRadioButton4))
-                .addContainerGap(43, Short.MAX_VALUE))
+                            .addGroup(AbaOrdenacaoLayout.createSequentialGroup()
+                                .addGap(58, 58, 58)
+                                .addComponent(ResulOrdLabel))
+                            .addGroup(AbaOrdenacaoLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(AbaOrdenacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(SelectionOrdButton)
+                                    .addComponent(BubbleOrdButton)
+                                    .addComponent(HeapOrdButton)
+                                    .addComponent(InsertionOrdButton)
+                                    .addGroup(AbaOrdenacaoLayout.createSequentialGroup()
+                                        .addComponent(VetorOrdText, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton4)))))
+                        .addGap(0, 58, Short.MAX_VALUE))
+                    .addComponent(RespostaOrdenacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         AbaOrdenacaoLayout.setVerticalGroup(
             AbaOrdenacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AbaOrdenacaoLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addGap(33, 33, 33)
                 .addGroup(AbaOrdenacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ConjNumOrdLabel)
-                    .addComponent(VetorOrdText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(VetorOrdText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ResulOrdLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(InsertionOrdButton)
-                .addGroup(AbaOrdenacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AbaOrdenacaoLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BubbleOrdButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(SelectionOrdButton))
-                    .addGroup(AbaOrdenacaoLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jButton4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton4)
-                .addGap(18, 18, 18)
+                .addComponent(BubbleOrdButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(SelectionOrdButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(HeapOrdButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(RespostaOrdenacao)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Ordenação", AbaOrdenacao);
@@ -253,7 +255,9 @@ public class Janelainicial extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -275,30 +279,35 @@ public class Janelainicial extends javax.swing.JFrame {
         int[] vetorNumeros = ConverteListaStringToInt(vetorTexto.split(","));
         long inicio = System.nanoTime();
         switch (botaoSelecionado.toLowerCase()) {
-            case "insertion" :                
+            case "insertion" : 
+                this.ordenacao.InsertionSort(vetorNumeros);
                 break;
             case "bubble":
+                this.ordenacao.BubbleSort(vetorNumeros);
                 break;
             case "selection":
                 this.ordenacao.SelectionSort(vetorNumeros);
                 break;
             case "heap":
+                this.ordenacao.HeapSort(vetorNumeros);
                 break;
             default:
+                
                 break;
         }
         long tempoTotal = System.nanoTime()- inicio;
-        this.RespostaOrdenacao.setText("");
-        this.RespostaOrdenacao.setText(this.ordenacao.printaVetor(vetorNumeros)+",Tempo de execução: " + tempoTotal + "(nanosegundos)" );        
+        //this.RespostaOrdenacao.setText("");
+        System.out.println("");
+        this.RespostaOrdenacao.setText(this.ordenacao.printaVetor(vetorNumeros)+"\nTempo de execução: " + tempoTotal + "(nanosegundos)" );        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void VetorOrdTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VetorOrdTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_VetorOrdTextActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void HeapOrdButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeapOrdButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_HeapOrdButtonActionPerformed
 
     public String RetornaBotaoOrdenacaoSelecionado(ButtonGroup GrupodeBotoes) {
         for (Enumeration<AbstractButton> buttons = GrupodeBotoes.getElements(); buttons.hasMoreElements();) {
@@ -366,6 +375,7 @@ public class Janelainicial extends javax.swing.JFrame {
     private javax.swing.JLabel ConjNumOrdLabel;
     private javax.swing.JLabel ConjuntoNumLabel;
     private javax.swing.ButtonGroup GrupoOrdenacaoRadio;
+    private javax.swing.JRadioButton HeapOrdButton;
     private javax.swing.JRadioButton InsertionOrdButton;
     private javax.swing.JLabel NumBuscaLabel;
     private javax.swing.JLabel RespostaOrdenacao;
@@ -379,7 +389,6 @@ public class Janelainicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
